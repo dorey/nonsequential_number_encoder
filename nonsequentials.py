@@ -5,6 +5,7 @@ def nonsequential_encode(num, digits=10, alphabet='0123456789ABCDEFGHIJKLMNOPQRS
     # same ID string.
     if num == 0:
         return alphabet[0]
+    num = num * 10 + 1
     num = int(str(num).rjust(digits, '0')[::-1])
     base36 = ''
     while num != 0:
@@ -13,4 +14,4 @@ def nonsequential_encode(num, digits=10, alphabet='0123456789ABCDEFGHIJKLMNOPQRS
     return base36.upper()
 
 def nonsequential_decode(estr):
-    return int(str(int(estr, 36))[::-1])
+    return (int(str(int(estr, 36))[::-1]) -1) / 10
