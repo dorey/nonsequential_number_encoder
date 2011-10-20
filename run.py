@@ -11,3 +11,7 @@ def nonsequential_encode(num, digits=10, alphabet='abcdefghijklmnopqrstuvwxyz012
         num, i = divmod(num, len(alphabet))
         base36 = alphabet[i] + base36
     return base36.upper()
+
+print nonsequential_encode(100)
+print nonsequential_encode(101)
+print nonsequential_encode(102)
