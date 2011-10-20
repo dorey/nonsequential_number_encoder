@@ -14,7 +14,3 @@ def nonsequential_encode(num, digits=10, alphabet='0123456789ABCDEFGHIJKLMNOPQRS
 
 def nonsequential_decode(estr):
     return int(str(int(estr, 36))[::-1])
-
-print nonsequential_decode(nonsequential_encode(100))
-print nonsequential_decode(nonsequential_encode(101))
-print nonsequential_decode(nonsequential_encode(102))
