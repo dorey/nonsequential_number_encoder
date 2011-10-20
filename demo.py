@@ -1,5 +1,11 @@
 from nonsequentials import *
 
-print nonsequential_decode(nonsequential_encode(100))
-print nonsequential_decode(nonsequential_encode(101))
-print nonsequential_decode(nonsequential_encode(102))
+def print_demo(num):
+    enc = nonsequential_encode(num)
+    dec = nonsequential_decode(enc)
+    print "[%s] encodes to [%s] which decodes to [%s]" % \
+        (str(num), enc, dec)
+
+print_demo(100)
+print_demo(101)
+print_demo(102)
